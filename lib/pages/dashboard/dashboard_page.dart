@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:fuel_ledger/core/colors.dart';
 import 'package:fuel_ledger/pages/bank_page.dart';
 import 'package:fuel_ledger/pages/home_page.dart';
 import 'package:fuel_ledger/pages/report_page.dart';
 import 'package:fuel_ledger/pages/sales_page.dart';
 import 'package:fuel_ledger/pages/stock_page.dart';
 import 'package:fuel_ledger/providers/auth_provider.dart';
-import 'package:fuel_ledger/utils/colors.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';

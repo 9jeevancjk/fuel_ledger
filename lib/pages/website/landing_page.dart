@@ -3,7 +3,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:provider/provider.dart';
 
 // void main() {
 //   runApp(
@@ -130,6 +129,8 @@ class HeroSection extends StatelessWidget {
 
 // TRUST SECTION (conversion booster)
 class TrustSection extends StatelessWidget {
+  const TrustSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -169,7 +170,7 @@ class DashboardPreview extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.05), blurRadius: 20)],
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.2), blurRadius: 20)],
       ),
       child: const Text("Live Metric"),
     );
@@ -231,6 +232,8 @@ class PricingCard extends StatelessWidget {
 
 // CTA (high conversion)
 class CTASection extends StatelessWidget {
+  const CTASection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -241,7 +244,9 @@ class CTASection extends StatelessWidget {
           const Text("Start Managing Your Fuel Station Today",
               style: TextStyle(color: Colors.white, fontSize: 24)),
           const SizedBox(height: 20),
-          ElevatedButton(onPressed: () {}, child: const Text("Book Free Demo"))
+          ElevatedButton(onPressed: () {
+              context.push("/onboarding");
+          }, child: const Text("Book Free Demo"))
         ],
       ),
     );
@@ -250,6 +255,8 @@ class CTASection extends StatelessWidget {
 
 // FAQ (SEO important)
 class FAQSection extends StatelessWidget {
+  const FAQSection({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
